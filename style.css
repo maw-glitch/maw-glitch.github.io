@@ -65,6 +65,11 @@ body { font-family: 'Inter','Segoe UI',Arial,sans-serif; background: var(--bg); 
   display: flex; align-items: center; justify-content: center;
   border: 3px solid var(--blue);
 }
+.avatar-img {
+  width: 116px; height: 116px; border-radius: 50%;
+  object-fit: cover; object-position: top center;
+  border: 3px solid var(--blue);
+}
 .greeting { text-align: center; font-size: 1rem; font-weight: 700; color: var(--text-h); margin-bottom: 3px; }
 .tagline  { text-align: center; font-size: 0.7rem; color: var(--text-sm); margin-bottom: 12px; font-style: italic; }
 .tiles { display: flex; flex-direction: column; gap: 8px; }
