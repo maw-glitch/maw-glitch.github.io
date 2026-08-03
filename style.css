@@ -1,0 +1,156 @@
+:root {
+  --ink: #1a1a1a;
+  --muted: #666;
+  --line: #e5e5e5;
+  --bg: #ffffff;
+  --bg-alt: #fafafa;
+  --accent: #2563eb;
+  --max: 760px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.6;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+/* ---------- Hero ---------- */
+.hero {
+  padding: 96px 0 64px;
+  border-bottom: 1px solid var(--line);
+}
+.name {
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.tagline {
+  font-size: 1.25rem;
+  color: var(--muted);
+  margin-top: 8px;
+  min-height: 1.2em;
+}
+.location {
+  color: var(--muted);
+  margin-top: 4px;
+}
+.links {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.links a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+.links a:hover { text-decoration: underline; }
+
+/* ---------- Sections ---------- */
+.section { padding: 56px 0; border-bottom: 1px solid var(--line); }
+.section.alt { background: var(--bg-alt); }
+.section h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  letter-spacing: -0.01em;
+}
+
+/* ---------- Timeline ---------- */
+.timeline {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 4px;
+  font-weight: 500;
+}
+.timeline li {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 14px;
+}
+.timeline li:not(:last-child)::after {
+  content: "→";
+  color: var(--muted);
+  margin-left: 12px;
+  font-weight: 400;
+}
+
+.journey-sub { color: var(--muted); margin-top: 16px; font-size: 0.95rem; }
+
+/* ---------- Experience / Education ---------- */
+.job { margin-bottom: 32px; }
+.job:last-child { margin-bottom: 0; }
+.job-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.job h3 { font-size: 1.1rem; font-weight: 600; }
+.dates { color: var(--muted); font-size: 0.9rem; white-space: nowrap; }
+.company { color: var(--muted); margin: 2px 0 10px; }
+.bullets { padding-left: 20px; }
+.bullets li { margin-bottom: 6px; }
+.skills-line { color: var(--muted); font-size: 0.9rem; margin-top: 8px; }
+
+/* ---------- Skills ---------- */
+.tags { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+.tags li {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+}
+.section.alt .tags li { background: var(--bg); }
+
+/* ---------- Certifications ---------- */
+.certs { list-style: none; }
+.certs li { margin-bottom: 10px; }
+.certs a { color: var(--accent); text-decoration: none; font-weight: 500; }
+.certs a:hover { text-decoration: underline; }
+.cert-meta { color: var(--muted); font-size: 0.88rem; }
+
+/* ---------- Technical Skills grid ---------- */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px 40px;
+}
+.tech-block h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.tech-block ul { padding-left: 18px; }
+.tech-block li { margin-bottom: 4px; font-size: 0.92rem; }
+@media (max-width: 600px) {
+  .tech-grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- About ---------- */
+.about-grid p { margin-bottom: 12px; max-width: 60ch; }
+
+/* ---------- Footer ---------- */
+.footer { padding: 32px 0; color: var(--muted); font-size: 0.9rem; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 600px) {
+  .name { font-size: 2.1rem; }
+  .hero { padding: 64px 0 48px; }
+  .section { padding: 40px 0; }
+}
